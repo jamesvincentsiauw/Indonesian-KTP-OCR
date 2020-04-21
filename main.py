@@ -1,7 +1,9 @@
 
-import cv2
+import cv2.cv2 as cv2
 import pytesseract
 import matplotlib.pyplot as plt
+
+
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 if __name__ == "__main__":
@@ -20,7 +22,6 @@ if __name__ == "__main__":
                 word = word.replace("?", "7")
             if "b" in word:
                 word = word.replace("b", "6")
-
         print(word)
     plt.figure(figsize=(16, 12))
     plt.imshow(threshed)
